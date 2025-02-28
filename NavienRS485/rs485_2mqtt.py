@@ -75,7 +75,7 @@ class Wallpad:
     _device_list = []
 
     def __init__(self):
-        self.mqtt_client = mqtt.Client(callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
+        self.mqtt_client = mqtt.Client()
         self.mqtt_client.on_message    = self.on_raw_message
         self.mqtt_client.on_disconnect = self.on_disconnect
         self.mqtt_client.username_pw_set(username=MQTT_USERNAME, password=MQTT_PASSWORD)
