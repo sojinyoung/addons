@@ -361,7 +361,7 @@ class Kocom(rs485):
             logging.info('[Serial Write] Connection Error')
 
     def connect_mqtt(self, server, name):
-        mqtt_client = mqtt.Client()
+        mqtt_client = mqtt.Client(callback_api_version=mqtt.CallbackAPIVersion.VERSION2)
         mqtt_client.on_message = self.on_message
         #mqtt_client.on_publish = self.on_publish
         mqtt_client.on_subscribe = self.on_subscribe
