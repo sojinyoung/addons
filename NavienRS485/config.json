@@ -10,7 +10,7 @@
     "amd64",
     "i386"
   ],
-  "url": "https://github.com/JeongTaehun/addons",
+  "url": "https://github.com/sojinyoung/addons",
   "startup": "application",
   "boot": "auto",
   "uart": true,
@@ -22,23 +22,23 @@
       "type": "Serial"
     },
     "Socket": {
-      "server": "192.168.x.x",
+      "server": "192.168.1.99",
       "port": 8899
     },
     "SocketDevice": {
-      "device": "kocom"
+      "device": "Navien"
     },
     "Serial": {
       "port1": "/dev/ttyUSB0"
     },
     "SerialDevice": {
-      "port1": "kocom"
+      "port1": "Navien"
     },
     "MQTT": {
       "anonymous": false,
-      "server": "192.168.0.252",
-      "username": "taehun.jeong",
-      "password": "Xognsdlahs1!"
+      "server": "192.168.1.191",
+      "username": "mqtt",
+      "password": "hamqtt!"
     },
     "Wallpad": {
       "light": false,
