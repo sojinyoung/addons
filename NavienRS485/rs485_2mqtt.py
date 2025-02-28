@@ -214,7 +214,7 @@ optional_info = {'modes': ['off', 'heat'], 'temp_step': 0.5, 'precision': 0.5, '
 침실2난방 =  wallpad.add_device(device_name = '침실2 난방',   device_id = '36', device_subid = '14', device_class = 'climate', optional_info = optional_info)
 침실3난방 =  wallpad.add_device(device_name = '침실3 난방',   device_id = '36', device_subid = '13', device_class = 'climate', optional_info = optional_info)
 알파룸난방= wallpad.add_device(device_name = '알파룸 난방', device_id = '36', device_subid = '15', device_class = 'climate', optional_info = optional_info)
-난방전체 =  wallpad.add_device(device_name = '난방 전체',   device_id = '36', device_subid = '1f', device_class = 'climate', mqtt_discovery = False, child_device = [거실난방, 침실난방, 서재난방, 동굴난방, 알파룸난방])
+난방전체 =  wallpad.add_device(device_name = '난방 전체',   device_id = '36', device_subid = '1f', device_class = 'climate', mqtt_discovery = False, child_device = [거실난방, 침실난방, 침실2난방, 침실3난방, 알파룸난방])
 
 난방전체.register_status(message_flag = '01', attr_name = 'availability', regex = r'()', topic_class ='availability_topic', process_func = lambda v: 'online')
 
